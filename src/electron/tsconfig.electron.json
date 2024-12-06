@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        // require strict types (null-save)
+        "strict": true,
+        // tell TypeScript to generate ESM Syntax when build
+        "target": "ESNext",
+        // tell TypeScript to require ESM Syntax as input ( includin .js file imports) when we write our code
+        "module": "NodeNext",
+        "outDir": "../../dist-electron",
+        // ignore errors from dependencies that are not fully ready for typescript
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "types": ["./window.d.ts"],
+        "esModuleInterop": true
+    },
+    "include": ["."]
+}
