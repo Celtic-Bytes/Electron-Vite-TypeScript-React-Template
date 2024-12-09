@@ -18,10 +18,15 @@
 
         /* Linting */
         "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "forceConsistentCasingInFileNames": true,
+        "strictPropertyInitialization": false,
+        "composite": true,
+        "declaration": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@/electron/*": ["./src/electron/*"]
+        }
     },
-    "include": ["src/ui", "src/electron/window.d.ts"]
+    "include": ["src/ui", "src/electron"],
+    "exclude": ["src/electron/tsconfig.electron.json"]
 }
