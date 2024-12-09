@@ -1,6 +1,12 @@
 {
     "appId": "com.celticbytes.meowvies",
-    "files": ["dist-electron", "dist-react"],
+    "files": [
+        "dist-electron",
+        "dist-react",
+        "!**/*.map",
+        "!**/*.d.ts",
+        "!**/*.d.mts"
+    ],
     "icon": "./assets/icon.png",
     "mac": {
         "target": "dmg"
