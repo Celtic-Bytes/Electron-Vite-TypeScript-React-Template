@@ -4,6 +4,7 @@ import { IpcChannels } from "./models/ipc.models.js";
 
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({
+        icon: path.join(app.getAppPath(), "assets", "icon.png"),
         webPreferences: {
             preload: path.join(
                 app.getAppPath(),
@@ -22,6 +23,7 @@ app.on("ready", () => {
     mainWindow.webContents.openDevTools();
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 ipcMain.handle(IpcChannels.CHANNEL1, async (event, message: string) => {
     return "message received by the main process";
 });
