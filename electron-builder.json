@@ -1,5 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
     "appId": "com.yourcompanyname.youreappname",
+    "productName": "YourAppName",
+    "asar": true,
+    "icon": "./assets/icon.png",
     "files": [
         "dist-electron",
         "dist-react",
@@ -7,15 +11,28 @@
         "!**/*.d.ts",
         "!**/*.d.mts"
     ],
-    "icon": "./assets/icon.png",
+
     "mac": {
-        "target": "dmg"
+        "target": ["dmg"],
+        "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
     },
     "linux": {
-        "target": "AppImage",
+        "target": ["AppImage"],
+        "artifactName": "${productName}-Linux-${version}.${ext}",
         "category": "Utility"
     },
     "win": {
-        "target": ["portable", "msi"]
+        "target": [
+            { "target": "portable", "arch": ["x64"] },
+            { "target": "msi", "arch": ["x64"] },
+            { "target": "nsis", "arch": ["x64"] }
+        ],
+        "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+    },
+    "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true,
+        "deleteAppDataOnUninstall": false
     }
 }
