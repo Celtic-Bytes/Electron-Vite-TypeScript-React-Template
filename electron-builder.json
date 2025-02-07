@@ -1,5 +1,5 @@
 {
-    "appId": "com.celticbytes.meowvies",
+    "appId": "com.yourcompanyname.youreappname",
     "files": [
         "dist-electron",
         "dist-react",
