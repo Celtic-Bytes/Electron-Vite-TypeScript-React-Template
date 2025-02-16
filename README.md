@@ -8,11 +8,11 @@ Also a tiped preload is configured and working.
 
 ## Why this template ?
 
-When I started building an Electron app, I realized that there were a lot of options and combinations of technologies. Most of them were complex and had a lot of unnecessary dependencies.
-Other options were simple but introduced a boilerplate that was difficult to understand and maintain, like Electron Forge.  
-Also, I was very surprised that when I created a new project with Electron Forge, from the first minute I already had warnings about obsolete dependencies.  
-So I decided to investigate and create a simple template, with very few dependencies and that was easy to maintain.  
-It also includes the preload and the debugger ready to be used.
+I've never liked Electron app creation tools. They add too much boilerplate, outdated dependencies, and difficulty in understanding and manipulating the project.
+So I decided to experiment to find a lighter and easier way to create and manage an Electron project.
+One of the ways is using Vite.
+Vite is a powerful tool that some people use to create Electron applications. The problem is that it is oriented towards frontend and not node applications. With its use I have realized that in the long run it has limitations.
+So use this repo, have fun with it, learn, but if you need something really light and that works perfectly, I recommend you to use my other template [electron-simple-template](https://github.com/Celtic-Bytes/electron-simple-template).
 
 I hope you find it useful.
 
